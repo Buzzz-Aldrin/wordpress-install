@@ -7,9 +7,9 @@ sudo systemctl enable apache2
 sudo systemctl start apache2
 
 #Задаем переменные для MariaDB
-db_name=wp_database
-db_user=wp_user
-db_userpass=qwerty123
+read -p 'Database name: ' db_name
+read -p 'Database username: ' db_user
+read -p 'Database password: ' db_userpass
 
 #Ставим MariaDB, создаем пользователя, пароль и БД
 sudo apt -y install mariadb-server mariadb-client mariadb-common
